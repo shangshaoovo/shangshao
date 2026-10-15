@@ -1,0 +1,233 @@
+/* v0.4: local story/body fonts and clear blue-white science cards. */
+body {
+  font-family: var(--font-story, 'CampusRound', system-ui, 'Microsoft YaHei', sans-serif);
+  font-size: 17px;
+  line-height: 1.9;
+  font-synthesis: weight;
+}
+.knowledge-hook:hover {
+  background: #F7FAFC;
+  border-color: #C9DEE7;
+  border-left-color: #94C8DE;
+}
+
+button, input, textarea, select { font-family: inherit; }
+.scene h1 { font-weight: 600; line-height: 1.5; letter-spacing: .015em; }
+.scene-art text {
+  font-family: var(--font-story, 'CampusRound', system-ui, 'Microsoft YaHei', sans-serif);
+}
+.narrative, .narrative p, .speech-text, .chat-line .speech-text,
+.dialogue-outcome, .dialogue-outcome p, .scene-memory,
+.option-label, .thought-button, .thought-button .option-label {
+  font-size: 17px;
+  line-height: 1.9;
+}
+.inner-voice .speech-text, .voice-lines p { font-size: 18px; line-height: 2; }
+.paper-lines, .paper-lines p { font-size: 18px; line-height: 2; }
+.speech-name { line-height: 1.8; }
+.option-label, .object-label, .device-person, .paper-title { font-weight: 500; }
+
+/* These blocks contain explanations, user text, or important information. */
+.knowledge-hook, #modal, .result-explanation, .privacy-line,
+.note, .source, .template, .private-note, textarea, select, input,
+.notice, .error, .footer {
+  font-family: var(--font-body, 'CampusWenKai', system-ui, 'Microsoft YaHei', sans-serif);
+}
+.result-explanation, .result-explanation p, .template, .private-note,
+textarea, select, .notice { font-size: 17px; line-height: 1.9; }
+.privacy-line, .note { font-size: 14px; line-height: 1.9; }
+.paper-writing .privacy-line { font-size: 14px; line-height: 1.9; }
+.paper-writing textarea { font-size: 17px; line-height: 2; }
+.source { font-size: 13px; line-height: 1.9; }
+.error { font-size: 14px; line-height: 1.9; }
+.footer { font-size: 12px; line-height: 1.85; }
+textarea::placeholder { line-height: 1.9; }
+textarea, select, input { max-width: 100%; }
+
+/* Keep the narrative layout; give the knowledge entrance a clear hierarchy. */
+.knowledge-hook {
+  display: block;
+  min-width: 0;
+  padding: 19px 21px 20px;
+  margin: 21px 0 17px;
+  border: 1px solid #C9DEE7;
+  border-left: 4px solid #94C8DE;
+  border-radius: 15px;
+  background: #F7FAFC;
+  box-shadow: none;
+}
+.knowledge-hook::before, .knowledge-hook::after,
+.knowledge-button::before, .knowledge-button::after {
+  display: none !important;
+  content: none !important;
+}
+.knowledge-hook .hook-kicker, .knowledge-label {
+  display: block;
+  font-size: 13px;
+  line-height: 1.8;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: #567F92;
+  margin: 0 0 6px;
+}
+.knowledge-hook .knowledge-topic {
+  display: block;
+  margin: 3px 0 7px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #295A72;
+  overflow-wrap: anywhere;
+}
+.knowledge-hook .knowledge-subtitle,
+.knowledge-heading .knowledge-subtitle {
+  margin: 6px 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #4E7383;
+  overflow-wrap: anywhere;
+}
+.knowledge-hook .knowledge-teaser,
+.knowledge-hook > p,
+.knowledge-hook > .knowledge-preview {
+  margin: 8px 0 15px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4E7181;
+}
+.knowledge-hook .knowledge-subtitle { font-size: 18px; line-height: 1.75; }
+.knowledge-hook > .knowledge-button, .knowledge-button {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 15px;
+  margin: 12px 0 0;
+  border: 1px solid #B9D7E4;
+  border-radius: 11px;
+  background: #E6F1F7;
+  box-shadow: none;
+  color: #2E6077;
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.knowledge-hook > .knowledge-button:hover, .knowledge-button:hover {
+  background: #D9EBF5;
+  border-color: #87B8CE;
+  box-shadow: none;
+}
+
+/* All modal content uses WenKai, including help and source panels. */
+#modal .modal-head {
+  gap: 12px;
+  padding: 17px 23px;
+  background: #F0F7FB;
+  border-bottom-color: #D0E2EA;
+}
+#modal .modal-head h2 {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #295A72;
+  overflow-wrap: anywhere;
+}
+#modal .modal-head button {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  background: #FFFEF8;
+}
+#modal .modal-body { font-size: 17px; line-height: 1.9; }
+#modal .modal-body p, #modal .modal-body li { line-height: 1.9; }
+#modal .modal-body .muted { font-size: 14px; line-height: 1.9; }
+#modal .modal-body .notice { font-size: 17px; line-height: 1.9; }
+.knowledge-panel { min-width: 0; }
+.knowledge-heading { margin: 3px 0 18px; }
+.knowledge-heading .knowledge-label { margin-bottom: 7px; }
+.knowledge-heading .knowledge-subtitle { margin: 0; }
+.knowledge-panel .knowledge-intro { font-size: 17px; line-height: 1.9; }
+.knowledge-panel .knowledge-sections h3 {
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.knowledge-panel .knowledge-sections p,
+.knowledge-panel .knowledge-sections li,
+.knowledge-panel .knowledge-takeaway,
+.knowledge-panel .diagram-node p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+.knowledge-panel .diagram-caption { font-size: 19px; line-height: 1.7; font-weight: 600; }
+.knowledge-panel .diagram-node h4 { font-size: 17px; font-weight: 600; line-height: 1.75; }
+.knowledge-panel .diagram-subtitle,
+.knowledge-panel .diagram-note,
+.knowledge-panel .diagram-compare .small { font-size: 14px; line-height: 1.9; }
+.knowledge-panel .source { font-size: 13px; line-height: 1.9; }
+.knowledge-return {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 23px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #D6E5EB;
+}
+.knowledge-return button { font-size: 16px; line-height: 1.8; min-height: 48px; }
+.knowledge-return button.primary { background: #2E627C; border-color: #2E627C; }
+
+@media(max-width:540px) {
+  body { font-size: 16px; }
+  .narrative, .narrative p, .speech-text, .chat-line .speech-text,
+  .dialogue-outcome, .dialogue-outcome p, .scene-memory,
+  .option-label, .thought-button, .thought-button .option-label { font-size: 16px; line-height: 1.9; }
+  .inner-voice .speech-text, .voice-lines p, .paper-lines, .paper-lines p { font-size: 18px; }
+  .scene h1 { line-height: 1.5; }
+  .knowledge-hook { padding: 17px 17px 18px; margin: 19px 0 15px; }
+  .knowledge-hook .knowledge-topic { font-size: 22px; line-height: 1.5; }
+  .knowledge-hook .knowledge-subtitle, .knowledge-heading .knowledge-subtitle { font-size: 18px; line-height: 1.75; }
+  .knowledge-hook .knowledge-teaser, .knowledge-hook > p,
+  .knowledge-hook > .knowledge-preview { font-size: 16px; line-height: 1.9; }
+  .knowledge-hook .knowledge-subtitle { font-size: 18px; line-height: 1.75; }
+  .knowledge-hook > .knowledge-button, .knowledge-button { padding: 11px 13px; font-size: 16px; }
+  .result-explanation, .result-explanation p, .template, .private-note,
+  textarea, select, .notice, .paper-writing textarea { font-size: 16px; line-height: 1.9; }
+  .privacy-line, .note, .paper-writing .privacy-line { font-size: 14px; }
+  #modal .modal-head { padding: 15px 17px; gap: 10px; }
+  #modal .modal-head h2 { font-size: 22px; line-height: 1.5; }
+  #modal .modal-head button { padding: 8px 10px; font-size: 14px; }
+  #modal .modal-body { padding: 14px 17px 24px; font-size: 16px; }
+  #modal .modal-body .notice { font-size: 16px; }
+  .knowledge-panel .knowledge-intro,
+  .knowledge-panel .knowledge-sections p,
+  .knowledge-panel .knowledge-sections li,
+  .knowledge-panel .knowledge-takeaway,
+  .knowledge-panel .diagram-node p { font-size: 16px; }
+  .knowledge-panel .knowledge-sections h3 { font-size: 18px; }
+  .knowledge-panel .diagram-caption { font-size: 18px; }
+  .knowledge-return { gap: 9px; margin-top: 20px; padding-top: 16px; }
+  .knowledge-return button { max-width: 100%; font-size: 16px; }
+}
+@media(max-width:355px) {
+  .knowledge-hook { padding: 16px 14px 17px; }
+  .knowledge-hook .knowledge-topic { font-size: 22px; }
+  .knowledge-hook > .knowledge-button, .knowledge-button { padding: 10px 11px; }
+  #modal .modal-head { padding: 14px 14px; gap: 8px; }
+  #modal .modal-head h2 { font-size: 21px; }
+  #modal .modal-body { padding: 13px 14px 22px; }
+  .knowledge-panel .knowledge-sections section { padding: 15px 13px; }
+  .knowledge-panel .knowledge-sections h3 { font-size: 18px; }
+  .knowledge-panel .diagram-node { padding: 13px; }
+  .knowledge-return button { width: 100%; }
+}

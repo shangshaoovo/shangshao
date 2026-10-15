@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const file=path.join(root,'index.html');
+let html=fs.readFileSync(file,'utf8');
+const read=(name)=>fs.readFileSync(path.join(root,'src',name),'utf8');
+const css=['fonts.css','style.css','v03.css','v04.css'].map(read).join('\n');
+const json=(name)=>JSON.stringify(JSON.parse(read(name))).replace(/</g,'\\u003c');
+const js='const PAGES='+json('pages.json')+'; const SOURCES='+json('sources.json')+';\n'+['visuals.js','diagrams.js','reading.js','app.js'].map(read).join('\n');
+html=html.replace(/<style>[\s\S]*?<\/style>/,()=>'<style>'+css+'</style>').replace(/<script>[\s\S]*?<\/script>/,()=>'<script>'+js+'</script>');
+fs.writeFileSync(file,html);
+console.log('Built index.html');

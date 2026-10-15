@@ -1,0 +1,51 @@
+{
+  "S1": {
+    "short": "WHO 青少年精神卫生",
+    "title": "青少年精神卫生",
+    "publisher": "世界卫生组织 WHO",
+    "date": "2025-09-01",
+    "url": "https://www.who.int/zh/news-room/fact-sheets/detail/adolescent-mental-health"
+  },
+  "S2": {
+    "short": "WHO 焦虑症",
+    "title": "焦虑症",
+    "publisher": "世界卫生组织 WHO",
+    "date": "2026-09-15",
+    "url": "https://www.who.int/zh/news-room/fact-sheets/detail/anxiety-disorders"
+  },
+  "S3": {
+    "short": "WHO 抑郁障碍",
+    "title": "抑郁障碍（抑郁症）",
+    "publisher": "世界卫生组织 WHO",
+    "date": "2026-09-11",
+    "url": "https://www.who.int/zh/news-room/fact-sheets/detail/depression"
+  },
+  "S4": {
+    "short": "NIMH 儿童青少年双相资料",
+    "title": "Bipolar Disorder in Children and Teens",
+    "publisher": "美国国立精神卫生研究所 NIMH",
+    "date": "2023年修订",
+    "url": "https://www.nimh.nih.gov/health/publications/bipolar-disorder-in-children-and-teens"
+  },
+  "S5": {
+    "short": "WHO 双相情感障碍",
+    "title": "双相情感障碍",
+    "publisher": "世界卫生组织 WHO",
+    "date": "2026-09-11",
+    "url": "https://www.who.int/zh/news-room/fact-sheets/detail/bipolar-disorder"
+  },
+  "S6": {
+    "short": "NIMH 压力与焦虑",
+    "title": "I’m So Stressed Out! Fact Sheet",
+    "publisher": "美国国立精神卫生研究所 NIMH",
+    "date": "页面未标明确切更新日期；核对于2026-10-14",
+    "url": "https://www.nimh.nih.gov/health/publications/so-stressed-out-fact-sheet"
+  },
+  "S7": {
+    "short": "NIMH 青少年抑郁",
+    "title": "Teen Depression: More Than Just Moodiness",
+    "publisher": "美国国立精神卫生研究所 NIMH",
+    "date": "页面未标明确切更新日期；核对于2026-10-14",
+    "url": "https://www.nimh.nih.gov/health/publications/teen-depression"
+  }
+}

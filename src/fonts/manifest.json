@@ -1,0 +1,20 @@
+[
+  {
+    "family": "CampusRound",
+    "source": "ChillRoundF",
+    "bytes": 1295500,
+    "glyphCoverage": 7582,
+    "corpusMissing": "▮▰✓✧✿",
+    "blankGlyphsExcluded": [
+      127
+    ]
+  },
+  {
+    "family": "CampusWenKai",
+    "source": "WenKai",
+    "bytes": 1596332,
+    "glyphCoverage": 7620,
+    "corpusMissing": "▮▰✧",
+    "blankGlyphsExcluded": []
+  }
+]
